@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-base: #08090C;
+  --color-bg-surface: #101218;
+  --color-bg-elevated: #161922;
+  
+  --color-text-primary: #F4F5F7;
+  --color-text-secondary: #969BA8;
+  --color-text-muted: #5E6370;
+
+  --color-accent-cyan: #00F0FF;
+  --color-accent-cyan-dim: rgba(0, 240, 255, 0.15);
+  
+  --color-accent-lime: #D9FF00;
+  
+  --color-status-safe: #00F0FF;     /* Using electric cyan for safe/low */
+  --color-status-suspicious: #FFB800; /* Warm amber */
+  --color-status-spam: #FF7B00;       /* Orange */
+  --color-status-scam: #FF3366;       /* Hot coral/red */
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --bg-base: #08090C;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Forensic Grid Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Subtle Noise Texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* Custom scrollbar for forensic theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-elevated);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Typography selection */
+::selection {
+  background-color: var(--color-accent-cyan-dim);
+  color: var(--color-accent-cyan);
+}
+
+/* Hide number input spinners */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

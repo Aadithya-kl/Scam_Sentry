@@ -1,0 +1,26 @@
+# Render Blueprint for the ScamSentry API. No secrets live in this file:
+# entries with `sync: false` are prompted for in the Render dashboard.
+services:
+  - type: web
+    name: scamsentry-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.backend
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    # Render injects PORT; Dockerfile.backend binds uvicorn to 0.0.0.0:$PORT.
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: VIRUSTOTAL_ENABLED
+        value: "false"
+      - key: DEMO_MODE
+        value: "false"
+      - key: FRONTEND_URL
+        sync: false   # e.g. https://your-app.vercel.app
+      - key: CORS_PRODUCTION_ORIGINS
+        sync: false   # e.g. https://your-app.vercel.app,chrome-extension://<extension-id>
+      - key: URLHAUS_AUTH_KEY
+        sync: false
+      - key: GOOGLE_SAFE_BROWSING_API_KEY
+        sync: false

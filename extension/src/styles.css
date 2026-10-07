@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  width: 320px;
+  height: 480px;
+  background-color: theme('colors.bgBase');
+  color: theme('colors.textPrimary');
+  font-family: theme('fontFamily.sans');
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Forensic Grid Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.bgBase');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.bgElevated');
+  border-radius: 2px;
+}

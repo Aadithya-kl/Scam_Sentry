@@ -1,0 +1,1 @@
+"""ScamSentry AI - FastAPI backend."""

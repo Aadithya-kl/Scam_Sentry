@@ -1,0 +1,58 @@
+{
+  "split": "test",
+  "n_samples": 774,
+  "positive_class": "SPAM",
+  "accuracy": 0.9858,
+  "precision": 0.957,
+  "recall": 0.9271,
+  "f1": 0.9418,
+  "roc_auc": 0.9985,
+  "average_precision": 0.9903,
+  "confusion_matrix": {
+    "labels": [
+      "SAFE",
+      "SPAM"
+    ],
+    "matrix": [
+      [
+        674,
+        4
+      ],
+      [
+        7,
+        89
+      ]
+    ],
+    "true_negatives": 674,
+    "false_positives": 4,
+    "false_negatives": 7,
+    "true_positives": 89
+  },
+  "classification_report": {
+    "SAFE": {
+      "precision": 0.9897209985315712,
+      "recall": 0.9941002949852508,
+      "f1-score": 0.9919058130978661,
+      "support": 678.0
+    },
+    "SPAM": {
+      "precision": 0.956989247311828,
+      "recall": 0.9270833333333334,
+      "f1-score": 0.9417989417989417,
+      "support": 96.0
+    },
+    "accuracy": 0.9857881136950905,
+    "macro avg": {
+      "precision": 0.9733551229216997,
+      "recall": 0.9605918141592921,
+      "f1-score": 0.9668523774484039,
+      "support": 774.0
+    },
+    "weighted avg": {
+      "precision": 0.9856612464423007,
+      "recall": 0.9857881136950905,
+      "f1-score": 0.9856910073553637,
+      "support": 774.0
+    }
+  }
+}

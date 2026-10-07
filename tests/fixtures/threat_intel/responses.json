@@ -1,0 +1,48 @@
+{
+    "google_safe_browsing": {
+        "MATCH": {
+            "matches": [
+                {
+                    "threatType": "MALWARE",
+                    "platformType": "ANY_PLATFORM",
+                    "threatEntryType": "URL",
+                    "threat": {"url": "https://mock-malware.com"}
+                }
+            ]
+        },
+        "NO_MATCH": {}
+    },
+    "urlhaus": {
+        "MATCH": {
+            "query_status": "ok",
+            "url_status": "online"
+        },
+        "NO_MATCH": {
+            "query_status": "no_results"
+        }
+    },
+    "virustotal": {
+        "MATCH": {
+            "data": {
+                "attributes": {
+                    "last_analysis_stats": {
+                        "malicious": 3,
+                        "suspicious": 1,
+                        "harmless": 60
+                    }
+                }
+            }
+        },
+        "NO_MATCH": {
+            "data": {
+                "attributes": {
+                    "last_analysis_stats": {
+                        "malicious": 0,
+                        "suspicious": 0,
+                        "harmless": 65
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+# Local production-like stack. Secrets come from your local .env (never committed).
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - ENVIRONMENT=production
+      - CORS_PRODUCTION_ORIGINS=http://localhost:3000
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

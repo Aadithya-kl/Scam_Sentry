@@ -1,0 +1,166 @@
+{
+  "spam_indicators": [
+    {
+      "term": "[PHONE NUMBER]",
+      "coefficient": 14.9679
+    },
+    {
+      "term": "[URL]",
+      "coefficient": 9.9368
+    },
+    {
+      "term": "[MONEY AMOUNT]",
+      "coefficient": 9.9348
+    },
+    {
+      "term": "to [NUMBER]",
+      "coefficient": 8.0157
+    },
+    {
+      "term": "text",
+      "coefficient": 7.2161
+    },
+    {
+      "term": "[NUMBER]",
+      "coefficient": 6.8427
+    },
+    {
+      "term": "call [PHONE NUMBER]",
+      "coefficient": 6.7652
+    },
+    {
+      "term": "txt",
+      "coefficient": 6.7541
+    },
+    {
+      "term": "call",
+      "coefficient": 5.4805
+    },
+    {
+      "term": "free",
+      "coefficient": 5.4225
+    },
+    {
+      "term": "your",
+      "coefficient": 5.3295
+    },
+    {
+      "term": "150p",
+      "coefficient": 5.179
+    },
+    {
+      "term": "[!]",
+      "coefficient": 5.0582
+    },
+    {
+      "term": "to",
+      "coefficient": 4.7932
+    },
+    {
+      "term": "mobile",
+      "coefficient": 4.7671
+    },
+    {
+      "term": "reply",
+      "coefficient": 4.7185
+    },
+    {
+      "term": "service",
+      "coefficient": 4.6999
+    },
+    {
+      "term": "stop",
+      "coefficient": 4.5158
+    },
+    {
+      "term": "sms",
+      "coefficient": 4.3566
+    },
+    {
+      "term": "ringtone",
+      "coefficient": 4.1985
+    }
+  ],
+  "safe_indicators": [
+    {
+      "term": "my",
+      "coefficient": -3.9608
+    },
+    {
+      "term": "me",
+      "coefficient": -3.4749
+    },
+    {
+      "term": "ok",
+      "coefficient": -2.4249
+    },
+    {
+      "term": "that",
+      "coefficient": -2.2927
+    },
+    {
+      "term": "got",
+      "coefficient": -2.2659
+    },
+    {
+      "term": "your call",
+      "coefficient": -2.2229
+    },
+    {
+      "term": "then",
+      "coefficient": -2.1873
+    },
+    {
+      "term": "am",
+      "coefficient": -2.001
+    },
+    {
+      "term": "can",
+      "coefficient": -1.9624
+    },
+    {
+      "term": "he",
+      "coefficient": -1.9254
+    },
+    {
+      "term": "da",
+      "coefficient": -1.8953
+    },
+    {
+      "term": "but",
+      "coefficient": -1.8351
+    },
+    {
+      "term": "work",
+      "coefficient": -1.8335
+    },
+    {
+      "term": "it",
+      "coefficient": -1.831
+    },
+    {
+      "term": "home",
+      "coefficient": -1.8271
+    },
+    {
+      "term": "at",
+      "coefficient": -1.7675
+    },
+    {
+      "term": "its",
+      "coefficient": -1.7472
+    },
+    {
+      "term": "how",
+      "coefficient": -1.7371
+    },
+    {
+      "term": "when",
+      "coefficient": -1.7354
+    },
+    {
+      "term": "don",
+      "coefficient": -1.7215
+    }
+  ]
+}
